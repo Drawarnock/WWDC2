@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -34,6 +38,10 @@ img {
     font-family: 'Raleway';
 }
 
+.col-centered {
+    margin: 0 auto;
+}
+
 .home {
     background-image: url("../assets/img/header-bg.jpg");
     background-position: center center;
@@ -41,12 +49,12 @@ img {
     min-height: 100vh;
     background-repeat: no-repeat;
     background-color: #faf9fb;
-    padding: 0 10%;
     position: relative;
 
     &__information {
         position:absolute;
         top:50%;
+        width:100%;
         transform: translate(0,-50%);
     }
 
@@ -78,7 +86,7 @@ img {
 }
 
 .nav {
-    padding-top: 50px;
+    padding: 50px 10% 0;
 }
 
 .navbar {
@@ -113,12 +121,13 @@ img {
         border-bottom:3px solid transparent;
         padding: 5px 2px;
         transition: all .3s ease;
+    }
 
-        &--logo {
-            font-family: 'Pacifico', cursive;
-            font-size: 50px;
-            font-weight: normal; 
-        }
+    &__logo {
+        font-family: 'Pacifico', cursive;
+        font-size: 50px;
+        font-weight: normal; 
+        text-decoration: none;
     }
 }
 
@@ -158,14 +167,8 @@ img {
 .about {
     background-color: #00b1b1;
     min-height: 100vh;
-    padding: 0 10%;
-    display:flex;
+    display: flex;
     align-items: center;
-
-    &__img {
-        flex: 1 1 50%;
-        margin-right: 5%
-    }
 
     &__title {
         color: rgb(255, 255, 255);
@@ -188,14 +191,9 @@ img {
 .services {
     background-color: #70bfff;
     min-height: 100vh;
-    padding: 0 10%;
     display: flex;
     align-items: center;
-    &__menu {
-        padding:5%;
-        flex: 1 1 50%;
-        margin-right: 5%
-    }
+
     &__card {
         height: 100px;
         width: 400px;
@@ -206,10 +204,21 @@ img {
     }
 
     &__title {
-        background-image: url('../assets/img/services-bg.jpg');
-        border: 1px solid red;
-        flex: 1 1 50%;
-        margin-left: 5%
+        background-image: url('../assets/img/services.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height: 580px;
+        text-align: center;
+    }
+
+    &__text {
+        font-size:90px;
+        color: white;
+        font-weight: bold;
     }
 
     &__service {
@@ -217,25 +226,95 @@ img {
         font-weight: 700;
         height:100%;
         width:75%;
-        
+        position: relative;
     }
 
-    &__icon {
+    &__info {
+        position: absolute;
+        top:50%;
+        left:50%;
+        width:100%;
+        text-align: center;
+        transform:translate(-50%,-50%);
+    }
+
+    &__icon-container {
         width:25%;
         border-left: 1px solid #9d9d9d;
         height:100%;
-        width:25%
+        position: relative;
     }
+    &__icon {
+        position: absolute;
+        top:50%;
+        left:50%;
+        text-align: center;
+        transform:translate(-50%,-50%);
+    } 
 }
 
 .gallery {
     background-color: #ffe92f;
     min-height: 100vh;
+    padding-bottom: 120px;
+
+    &__title {
+        font-size: 90px;
+        text-align:center;
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    &__desc {
+        font-size: 17px;
+        width: 600px;
+        margin:auto;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    &__img {
+        box-shadow: 1px 1px 10px 1px rgba(44, 43, 43, 0.5);
+        &--col {
+            margin-top: 30px;
+        }
+    }
+
+    &__btn {
+        
+        width: 200px;
+        height:55px;
+        margin:auto;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 55px;
+        background-color: #5585a2;
+        color:white;
+        margin-top: 50px;
+        box-shadow: 1px 1px 5px 1px rgba(44, 43, 43, 0.5);
+    }
 }
 
 .subscribe {
     background-color: #ffffff;
-    min-height: 50vh;
+    min-height: 500px;
+    background-image: url('../assets/img/subscribe.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    &__title {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    &__desc {
+        font-size: 17px;
+    }
+
+    &__form-container {
+        
+    }
 }
 
 .blog {
