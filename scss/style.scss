@@ -275,8 +275,23 @@ img {
 
     &__img {
         box-shadow: 1px 1px 10px 1px rgba(44, 43, 43, 0.5);
+        
+
+        &--left {
+            margin-right: auto;
+        } 
+
+        &--right {
+            margin-left: auto;
+        }
+
         &--col {
             margin-top: 30px;
+        }
+
+        &--centered {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -289,10 +304,17 @@ img {
         text-decoration: none;
         text-align: center;
         line-height: 55px;
-        background-color: #5585a2;
         color:white;
         margin-top: 50px;
         box-shadow: 1px 1px 5px 1px rgba(44, 43, 43, 0.5);
+
+        &--blue {
+            background-color: #5585a2;
+        }
+
+        &--salmon {
+            background-color: #f72b3b;
+        }
     }
 }
 
@@ -302,22 +324,191 @@ img {
     background-image: url('../assets/img/subscribe.jpg');
     background-repeat: no-repeat;
     background-position: right center;
+    position: relative;
+  
+    &__container {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 
     &__title {
         font-size: 40px;
         font-weight: bold;
+        margin-bottom: 35px;
     }
 
     &__desc {
         font-size: 17px;
+        width: 550px;
+        margin-bottom: 35px;
     }
 
-    &__form-container {
-        
+}
+
+.form {
+    &__subscribe {
+        width: 570px;
+        padding: 12px;
+        height: 55px;
+        font-size: 15px;
+        background-color: rgba(255,255,255,0.5);
+        border: 1px solid black;
+        margin-right: 30px;
+    }
+
+    &__submit {
+        height: 55px;
+        width: 170px;
+        line-height: 55px;
+        font-size: 20px;
+        border:none;
+        background-color: #96b92c;
+        color: white;
+        box-shadow: 1px 1px 5px 1px rgba(44, 43, 43, 0.5);
+        cursor: pointer;
+    }
+
+    &__input {
+        width: 500px;
+        display:block;
+        margin:auto;
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: #78dada;
+        border: none;
+        color:#ddf3f4;
+    }
+
+    &__message {
+        width: 500px;
+        height: 250px;
+        resize: none;
+        display:block;
+        margin:auto;
+        padding: 15px;
+        background-color: #78dada;
+        border: none;
+        font-family: 'Raleway', sans-serif;
+        color:#ddf3f4;
     }
 }
 
 .blog {
     background-color: #b07cf7;
     min-height: 100vh;
+    padding-bottom: 120px;
+
+    &__title {
+        font-size: 90px;
+        text-align: center;
+        padding-top: 100px;
+        margin-bottom: 30px;
+        color: white;
+    }
+    &__desc {
+        font-size: 17px;
+        text-align: center;
+        color: white;
+        margin: auto;
+        width: 600px;
+    }
+
+    &__images {
+        margin: 50px auto;
+    }
+}
+
+.picture {
+    position: relative;
+    box-shadow: 1px 1px 5px 1px rgba(44, 43, 43, 0.5);
+    max-width: 370px;
+    max-height: 310px;
+    margin: auto;
+    
+    &__overlay {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 29%, rgba(0,0,0,0) 44%, rgba(0,0,0,0) 46%, rgba(0,0,0,0.21) 59%, rgba(0,0,0,0.89) 100%);
+    }
+
+    &__tile {
+        width: 60px;
+        background-color: rgba(0,0,0,0.3);
+        text-align: center;
+        border-radius: 5px;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+
+    &__date {
+        font-size: 32px;
+        color: white;
+        font-weight: bold;
+    }
+
+    &__month {
+        font-size: 21px;
+        color: white;
+        font-weight: 900;
+    }
+    &__title {
+        position: absolute;
+        font-size: 21px;
+        font-weight: bold;
+        color: white;
+        top: 65%;
+        left: 5%;
+        right: 5%;
+    }
+
+    &__who {
+        color: white;
+        position: absolute;
+        font-size: 14px;
+        top: 88%;
+        left: 5%;
+        right: 5%;
+    }
+}
+
+.contact {
+    background-image: url('../assets/img/contact.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 866px;
+    padding: 100px 0 120px 0;
+    &__title {
+        color:black;
+        font-size: 90px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom:50px;
+    }
+    &__desc {
+        font-size: 17px;
+        margin: 0 auto 50px;
+        width:350px;
+        text-align:center;
+    }
+
+    &__info {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__group {
+        margin-bottom: 20px;
+    }
+}
+
+.footer {
+    min-height: 90px;
+    background-color: #262626;
 }
