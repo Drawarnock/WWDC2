@@ -10,20 +10,18 @@
 </head>
 <body>
     <div class="container-fluid">
-        
-        <header class="home">
+        <header class="home" id="home">
             <nav class="nav">
                 <ul class="navbar">
                     <li class="navbar__ item navbar__item--left"><a class="navbar__logo" href="#">Cahee</a></li>
-                    <li class="navbar__item navbar__item--right"><a class="navbar__link navbar__link--active" href="#">HOME</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">ABOUT</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">SERVICES</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">GALLERY</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">BLOG</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="#">CONTACT</a></li>
+                    <li class="navbar__item navbar__item--right"><a class="navbar__link navbar__link--active" href="#home">HOME</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#about">ABOUT</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#services">SERVICES</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#gallery">GALLERY</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#blog">BLOG</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
-            
             <div class="home__information">
                 <div class="col-md-10 col-centered">
                     <span class="home__title">Fresh Life</span>
@@ -38,7 +36,7 @@
                 </svg>
             </a>
         </header>
-        <section class="about">
+        <section class="about" id="about">
             <div class="col-md-10 col-centered">
                 <div class="row align-items-center">
                     <div class="col-md-6 ">
@@ -56,7 +54,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="col-md-10 col-centered">
                 <div class="row">
                     <div class="col-md-6 d-flex justify-content-center align-items-center">
@@ -97,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <h2 class="gallery__title">Gallery</h2>
             <div class="gallery__desc">
                 Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -106,17 +104,25 @@
                 <div class="col-md-10 col-centered">
                     <div class="row">
                         <div class="col-md-8 ">
-                            <img class="gallery__img gallery__img--right " src="../assets/img/gallery-img1.png" alt="">
+                            <div class="gallery__dim gallery__dim--1"><img class="gallery__img gallery__img--right " src="../assets/img/gallery-img1.png" alt=""></div>
                         </div>
                         <div class="col-md-4 ">
-                            <img class="gallery__img gallery__img--left " src="../assets/img/gallery-img2.png" alt="">
-                            <img class="gallery__img gallery__img--left gallery__img--col" src="../assets/img/gallery-img3.png" alt="">
+                            <div class="gallery__dim gallery__dim--2">
+                                <img class="gallery__img gallery__img--left " src="../assets/img/gallery-img2.png" alt="">
+                            </div>
+                            <div class="gallery__dim gallery__dim--2 gallery__dim--col">
+                                <img class="gallery__img gallery__img--left" src="../assets/img/gallery-img3.png" alt="">
+                            </div>
                         </div>
                         <div class="col-md-6 ">
-                            <img class="gallery__img gallery__img--col gallery__img--right" src="../assets/img/gallery-img4.png" alt="">
+                            <div class="gallery__dim gallery__dim--3 gallery__dim--col">
+                                <img class="gallery__img gallery__img--right" src="../assets/img/gallery-img4.png" alt="">
+                            </div>
                         </div>
                         <div class="col-md-6 ">
-                            <img class="gallery__img gallery__img--col gallery__img--left" src="../assets/img/gallery-img5.png" alt="">
+                            <div class="gallery__dim gallery__dim--3 gallery__dim--col">
+                                <img class="gallery__img gallery__img--left" src="../assets/img/gallery-img5.png" alt="">
+                            </div>
                         </div>     
                     </div>
                 </div>
@@ -140,13 +146,13 @@
                     <div class="subscribe__form-container">
                             <form>
                                 <input class="form__subscribe" placeholder="Your email address..." type=text>
-                                <input class="form__submit" type="submit" value="SUBSCRIBE">
+                                <input class="form__submit form__submit--subscribe" type="submit" value="SUBSCRIBE">
                             </form>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="blog">
+        <section class="blog" id="blog">
             <h2 class="blog__title">Blog</h2>
             <div class="blog__desc">
                     Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
@@ -176,7 +182,7 @@
                                 <img src="../assets/img/blog2.png" alt="">
                                 <div class="picture__overlay">
                                     <div class="picture__tile">
-                                        <span class="picture__date">20</span>
+                                        <span class="picture__date">14</span>
                                         <span class="picture__month">NOV</span>
                                     </div>
                                     <div class="picture__title">
@@ -193,7 +199,7 @@
                                 <img src="../assets/img/blog3.png" alt="">
                                 <div class="picture__overlay">
                                         <div class="picture__tile">
-                                            <span class="picture__date">20</span>
+                                            <span class="picture__date">10</span>
                                             <span class="picture__month">NOV</span>
                                         </div>
                                         <div class="picture__title">
@@ -210,22 +216,35 @@
             </div>
             <a class="gallery__btn gallery__btn--salmon" href="#">VIEW MORE</a>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2 class="contact__title">Contact</h2>
             <div class="contact__desc">
                 For new projects, ideas, business or anything
                 you'd like to discuss, contact with me!
             </div>
             <div class="row">
-                <div class="col-md-4 offset-1">
-                <form>
-                    <input class="form__input" placeholder="Your name..." type="text">
-                    <input class="form__input" placeholder="Your email..." type="email">
-                    <input class="form__input" placeholder="Your phone number..." type="tel">
-                    <textarea class="form__message" placeholder="Your message..."></textarea>
+                <div class="col-md-5 offset-1 col-centered">
+                <form style="margin:auto;">
+                    <label class="form__label">
+                        <input class="form__input" placeholder="Your name..." type="text">
+                        <span class="form__focus"></span>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" placeholder="Your email..." type="email">
+                        <span class="form__focus"></span>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" placeholder="Your phone number..." type="tel">
+                        <span class="form__focus"></span>
+                    </label>
+                    <label class="form__label">
+                        <textarea class="form__message" placeholder="Your message..."></textarea>
+                        <span class="form__focus"></span>
+                    </label>
+                    <input class="form__submit form__submit--contact" type="submit" value="submit">
                 </form>
                 </div>
-                <div class="col-md-4 offset-2">
+                <div class="col-md-5 offset-1">
                     <div>
                         <div class="contact__group">
                             <div class="contact__info">ADDRESS</div>
@@ -243,9 +262,21 @@
                 </div>
             </div>
         </section>
-        <footer class="footer"></footer>
-        
-
+        <footer class="footer">
+                <div class="col-md-10 col-centered">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="footer__copy">&copy; 2015 Company. All right reserved.</div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="footer__logo">Cahee</div>
+                        </div>
+                        <div class="col-md-5 ">
+                            <div class="footer__who">Made with <span class="footer__who--red">love</span> by Auskteez</div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
     </div>
 </body>
 </html>

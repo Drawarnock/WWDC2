@@ -16,6 +16,10 @@ img {
     height: auto;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @font-face {
     src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
     font-family: 'Pacifico';
@@ -82,6 +86,11 @@ img {
         color:#ffdcd6;
         box-shadow: 1px 1px 4px 1px #9a9a9c;
         cursor: pointer;
+        transition: all .3s ease;
+        &:hover {
+            transform:scale(1.1);
+            background-color: #ee5022;
+        }
     }
 }
 
@@ -273,9 +282,33 @@ img {
         padding-bottom: 50px;
     }
 
+    &__dim {
+        overflow: hidden;
+        &--1 {
+            max-width:770px;
+            max-height: 550px;
+        }
+        &--2 {
+            max-width:370px;
+            max-height: 260px;
+        }
+        &--3 {
+            max-width:570px;
+            max-height:400px;
+        }
+
+        &--col {
+            margin-top: 30px;
+        }
+
+        &:hover .gallery__img {
+            transform:scale(1.1) rotate(3deg);
+        }
+    }
+
     &__img {
         box-shadow: 1px 1px 10px 1px rgba(44, 43, 43, 0.5);
-        
+        transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
         &--left {
             margin-right: auto;
@@ -283,10 +316,6 @@ img {
 
         &--right {
             margin-left: auto;
-        }
-
-        &--col {
-            margin-top: 30px;
         }
 
         &--centered {
@@ -307,13 +336,24 @@ img {
         color:white;
         margin-top: 50px;
         box-shadow: 1px 1px 5px 1px rgba(44, 43, 43, 0.5);
+        transition: all .3s ease;
 
         &--blue {
             background-color: #5585a2;
+
+            &:hover {
+                transform:scale(1.1);
+                background-color: #447491;
+            }
         }
 
         &--salmon {
             background-color: #f72b3b;
+
+            &:hover {
+                transform:scale(1.1);
+                background-color: #e61a2a;
+            }
         }
     }
 }
@@ -364,14 +404,34 @@ img {
         line-height: 55px;
         font-size: 20px;
         border:none;
-        background-color: #96b92c;
         color: white;
         box-shadow: 1px 1px 5px 1px rgba(44, 43, 43, 0.5);
         cursor: pointer;
+        transition: all .3s ease;
+
+        &--subscribe {
+            background-color: #96b92c;
+            &:hover {
+                transform:scale(1.1);
+                background-color: #85a81b;
+            }
+        }
+
+        &--contact {
+            margin-top: 15px;
+            background-color: #78dada;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            &:hover {
+                transform:scale(1.1);
+                background-color: #00c4c4;
+            }
+        }
     }
 
     &__input {
-        width: 500px;
+        width: 100%;
         display:block;
         margin:auto;
         margin-bottom: 15px;
@@ -379,6 +439,33 @@ img {
         background-color: #78dada;
         border: none;
         color:#ddf3f4;
+        outline:none;
+        transition: all .3s linear;
+        &:focus {
+            background-color: #00c4c4;
+        }
+
+        &:focus + .form__focus  {
+            width:5px;
+        }
+    }
+
+    &__label {
+        position:relative;
+        display: block;
+        width: 500px;
+        margin:auto;
+
+        .form__focus {
+            position: absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:0;
+            background-color: #355b82;
+            z-index: 1;
+            transition: all .3s linear;
+        }
     }
 
     &__message {
@@ -392,6 +479,21 @@ img {
         border: none;
         font-family: 'Raleway', sans-serif;
         color:#ddf3f4;
+        outline:none;
+        &:focus {
+            background-color: #00c4c4;
+        }
+        &:focus + .form__focus  {
+            width:5px;
+        }
+    }
+
+    &__input, &__message {
+        transition: all .5s ease;
+    }
+
+    &__message:focus, &__input:focus {
+        font-weight: bold;
     }
 }
 
@@ -427,6 +529,21 @@ img {
     max-height: 310px;
     margin: auto;
     
+    img {
+        filter:blur(2px);
+        transform:scale(0.95);
+        transition: all 0.5s ease-out;
+    }
+
+    &:hover .picture__overlay {
+        opacity:0;
+    }
+
+    &:hover img {
+        filter:blur(0);
+        transform:scale(1);
+    }
+
     &__overlay {
         position: absolute;
         top:0;
@@ -434,6 +551,7 @@ img {
         right:0;
         bottom:0;
         background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 29%, rgba(0,0,0,0) 44%, rgba(0,0,0,0) 46%, rgba(0,0,0,0.21) 59%, rgba(0,0,0,0.89) 100%);
+        transition: all 0.5s ease-out;
     }
 
     &__tile {
@@ -457,6 +575,7 @@ img {
         color: white;
         font-weight: 900;
     }
+
     &__title {
         position: absolute;
         font-size: 21px;
@@ -475,6 +594,7 @@ img {
         left: 5%;
         right: 5%;
     }
+
 }
 
 .contact {
@@ -491,6 +611,7 @@ img {
         text-align: center;
         margin-bottom:50px;
     }
+
     &__desc {
         font-size: 17px;
         margin: 0 auto 50px;
@@ -511,4 +632,38 @@ img {
 .footer {
     min-height: 90px;
     background-color: #262626;
+    line-height: 90px;
+    &__copy {
+        color:#b9b9b9;
+        font-size: 16px;
+    }
+
+    &__logo {
+        color:#b9b9b9;
+        text-align:center;
+        font-size: 25px;
+        font-family: 'Pacifico';
+    }
+
+    &__who {
+        color:#b9b9b9;
+        text-align:right;
+        font-size: 15px;
+        &--red {
+            color: #ff2b58;
+        }
+    }
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ddf3f4;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ddf3f4;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ddf3f4;
+}
+
