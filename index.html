@@ -39,17 +39,17 @@
         <section class="about" id="about">
             <div class="col-md-10 col-centered">
                 <div class="row align-items-center">
-                    <div class="col-md-6 ">
-                        <div><img src="../assets/img/about-img.png" alt="" ></div>
+                    <div class="col-xl-6 ">
+                        <div><img class="about__img" src="../assets/img/about-img.png" alt="" ></div>
                     </div>
-                    <div class="col-md-5 offset-1">
-                        <span class="about__information">
+                    <div class="col-xl-5 offset-xl-1">
+                        <div class="about__information">
                             <span class="about__title">About Us</span>
-                            <span class="about__description">
-                                <p class="about__paragraph">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis <br> nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in <br> reprehenderit in voluptate velit esse cillum.</p>
-                                <p class="about__paragraph">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus <br> error sit voluptatem accusantium doloremque laudantium, totam <br> rem aperiam, eaque ipsa quae ab illo inventore.</p>
-                            </span>
-                        </span>
+                            <div class="about__description">
+                                <p class="about__paragraph">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis  nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  reprehenderit in voluptate velit esse cillum.</p>
+                                <p class="about__paragraph">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
         <section class="services" id="services">
             <div class="col-md-10 col-centered">
                 <div class="row">
-                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="col-xl-6 order-xl-first order-last d-flex justify-content-center align-items-center">
                         <div class="services__menu">
                             <div class="services__card">
                                 <div class="services__service">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 ">
+                    <div class="col-md-12 col-xl-6">
                         <div class="services__title">
                             <span class="services__text">
                             Our Services
@@ -160,7 +160,7 @@
             <div class="blog__images">
                 <div class="col-md-10 col-centered">
                     <div class="row align-items-center">
-                        <div class="col-md-4 col-centered">
+                        <div class="col-xl-4 col-centered">
                             <div class="picture">
                                 <img src="../assets/img/blog1.png" alt="">
                                 <div class="picture__overlay">
@@ -177,7 +177,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-centered">
+                        <div class="col-xl-4 col-centered">
                             <div class="picture">
                                 <img src="../assets/img/blog2.png" alt="">
                                 <div class="picture__overlay">
@@ -194,21 +194,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-centered">
+                        <div class="col-xl-4 col-centered">
                             <div class="picture">
                                 <img src="../assets/img/blog3.png" alt="">
                                 <div class="picture__overlay">
-                                        <div class="picture__tile">
-                                            <span class="picture__date">10</span>
-                                            <span class="picture__month">NOV</span>
-                                        </div>
-                                        <div class="picture__title">
-                                            Pesticides & Food: What You Need to Know
-                                        </div>
-                                        <div class="picture__who">
-                                            By Auskteez - 6 hours ago
-                                        </div>
+                                    <div class="picture__tile">
+                                        <span class="picture__date">10</span>
+                                        <span class="picture__month">NOV</span>
                                     </div>
+                                    <div class="picture__title">
+                                        Pesticides & Food: What You Need to Know
+                                    </div>
+                                    <div class="picture__who">
+                                        By Auskteez - 6 hours ago
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,9 +222,10 @@
                 For new projects, ideas, business or anything
                 you'd like to discuss, contact with me!
             </div>
+            <div class="col-xl-10 col-centered">
             <div class="row">
-                <div class="col-md-5 offset-1 col-centered">
-                <form style="margin:auto;">
+                <div class="col-xl-6 col-centered">
+                <form >
                     <label class="form__label">
                         <input class="form__input" placeholder="Your name..." type="text">
                         <span class="form__focus"></span>
@@ -244,8 +245,8 @@
                     <input class="form__submit form__submit--contact" type="submit" value="submit">
                 </form>
                 </div>
-                <div class="col-md-5 offset-1">
-                    <div>
+                <div class="col-xl-5 offset-xl-1">
+                    <div class="contact__infos">
                         <div class="contact__group">
                             <div class="contact__info">ADDRESS</div>
                             <div class="contact__data">123 City name Street, City, Country</div>
@@ -261,20 +262,13 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         <footer class="footer">
-                <div class="col-md-10 col-centered">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="footer__copy">&copy; 2015 Company. All right reserved.</div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="footer__logo">Cahee</div>
-                        </div>
-                        <div class="col-md-5 ">
-                            <div class="footer__who">Made with <span class="footer__who--red">love</span> by Auskteez</div>
-                        </div>
-                    </div>
+                <div class="col-lg-10 d-flex flex-column flex-lg-row justify-content-between align-items-center col-centered">
+                    <span class="footer__copy">&copy; 2015 Company. All right reserved.</span>
+                    <span class="footer__logo">Cahee</span>
+                    <span class="footer__who">Made with <span class="footer__who--red">love</span> by Auskteez</span>
                 </div>
         </footer>
     </div>
