@@ -16,10 +16,6 @@ img {
     height: auto;
 }
 
-// html {
-//     overflow-x: hidden;
-// }
-
 body {
     overflow-x: hidden;
 }
@@ -46,11 +42,6 @@ body {
     font-family: 'Raleway';
 }
 
-.col-centered {
-    margin-left:auto;
-    margin-right: auto;
-}
-
 .home {
     background-image: url("../assets/img/header-bg.jpg");
     background-position: center center;
@@ -58,6 +49,7 @@ body {
     min-height: 100vh;
     background-repeat: no-repeat;
     background-color: #faf9fb;
+    
     position: relative;
 
     &__information {
@@ -74,6 +66,7 @@ body {
     }
 
     &__description {
+        width: 370px;
         font-size: 17px;
         display: block;
     }
@@ -196,13 +189,14 @@ body {
     }
 
     &__information {
+        margin: auto;
     }
 
     &__paragraph {
         color: rgb(255, 255, 255);
         font-size: 17px;
         line-height: 28px;
-        max-width: 500px;
+        width: 500px;
         margin-bottom: 10px;
     }
 }
@@ -215,17 +209,22 @@ body {
 
     &__card {
         height: 100px;
-        width: 400px;
+        width: 100%;
         background-color: #ffffff;
         margin-bottom: 20px;
         box-shadow: 2px 2px 5px 1px #44739a;
         display:flex;
+        transition: all .2s linear;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     &__title {
         background-image: url('../assets/img/services.png');
         background-position: center center;
         background-repeat: no-repeat;
+        background-size: contain;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -238,6 +237,10 @@ body {
         font-size:90px;
         color: white;
         font-weight: bold;
+    }
+
+    &__menu {
+        width: 400px
     }
 
     &__service {
@@ -274,8 +277,8 @@ body {
 
 .gallery {
     background-color: #ffe92f;
-    padding: 100px 0;
-    padding-bottom: 120px;
+    padding: 100px 0 120px;
+
 
     &__title {
         font-size: 90px;
@@ -291,36 +294,19 @@ body {
         padding-bottom: 50px;
     }
 
-    &__dim {
-        overflow: hidden;
-        margin-left:auto;
-        margin-right:auto;
-        &--1 {
-            max-width:770px;
-            max-height: 550px;
-        }
-        &--2 {
-            max-width:370px;
-            max-height: 260px;
-        }
-        &--3 {
-            max-width:570px;
-            max-height:400px;
+    &__item {
+        margin-bottom: 30px;
+        transition: all .3s ease-out;
+
+         img:hover {
+            transform: scale(0.9) rotate(3deg);
         }
 
-        &--col {
-            margin-top: 30px;
-        }
-
-        &:hover .gallery__img {
-            transform:scale(1.1) rotate(3deg);
+        img {
+            width: 100%;
         }
     }
 
-    &__images {
-        // padding-left:20%;
-        // padding-right:20%;
-    }
 
     &__img {
         box-shadow: 1px 1px 10px 1px rgba(44, 43, 43, 0.5);
@@ -337,6 +323,10 @@ body {
         &--centered {
             margin-left: auto;
             margin-right: auto;
+        }
+
+        &--marg {
+            margin-top: 30px;
         }
     }
 
@@ -411,6 +401,10 @@ body {
         background-color: rgba(255,255,255,0.5);
         border: 1px solid black;
         margin-right: 30px;
+
+        &::placeholder {
+            color: #aaaaaa;
+        }
     }
 
     &__submit {
@@ -463,6 +457,10 @@ body {
         &:focus + .form__focus  {
             width:5px;
         }
+
+        &::placeholder { 
+            color: #ddf3f4;
+        }
     }
 
     &__label {
@@ -500,6 +498,9 @@ body {
         }
         &:focus + .form__focus  {
             width:5px;
+        }
+        &::placeholder { 
+            color: #ddf3f4;
         }
     }
 
@@ -669,18 +670,6 @@ body {
     }
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #ddf3f4;
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #ddf3f4;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #ddf3f4;
-}
-
  @media only screen and (max-width: 1199px) {
     .about {
         &__information {
@@ -698,35 +687,70 @@ body {
         text-align: center;
         margin-top: 50px;
     }
+
+    .services__menu {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .subscribe__desc {
+        background-color: rgba(239,239,244, 0.6);
+        display: inline-block;
+    }
 }
 
 @media (max-width: 991px) {
     .form__subscribe {
-        width: 60%;
+        width: 65%;
     }
 
     .footer {
         line-height: 40px;
         padding:15px 0;
     }
-  }
+
+    .subscribe__title {
+        background-color: rgba(239,239,244, 0.6);
+        display: inline-block;
+    }
+}
 
 @media only screen and (max-width: 767px) {
     .home {
 
         &__title {
             text-align:center;
-
         }
+
         &__description {
+            margin-left:auto;
+            margin-right:auto;
             text-align:center;
-
         }
+
         &__btn {
             margin-left: auto;
             margin-right: auto;
             margin-top: 40px;
         }
+
+        &__information {
+            text-align:center;
+        }
+
+        &__description {
+            
+            background-color: rgba(239,239,244, 0.5);
+        }      
+    }
+
+    .subscribe__desc {
+        width: 95%;
+        text-align:center
+    }
+
+    .subscribe__container {
+        text-align: center;
     }
 
     .gallery__img {
@@ -734,8 +758,49 @@ body {
         margin-right: auto;
     }
 
+    .gallery__desc {
+        width: 90%;
+    }
+
+    .blog__desc {
+        width: 90%;
+    }
+
     .form__label {
         width: 80%;
     }
 
+    .form__subscribe {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+
+
+    .form__label {
+        width: 95%;
+    }
+
+    .form__subscribe {
+        width: 95%;
+    }
+    .services__menu {
+        width: 90%;
+    }
+
+    .contact__desc {
+        width: 95%;
+    }
+
+    .home__description {
+        width: 80%;
+    }
+
+    .about__paragraph {
+        width: 95%;
+    }
 }
